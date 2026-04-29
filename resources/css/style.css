@@ -1,0 +1,150 @@
+    /* CUSTOM STYLE PRESTO WEB SIZE */
+    
+    /* ROOT AND VARIABLES */
+    
+    :root{
+        --black: rgb(0, 0, 0);
+        --blue: rgb(5, 5, 146);
+        --yellow: rgb(235, 191, 16);
+        --white: rgb(255, 255, 255);
+        --red: rgb(255, 35, 35);
+        --fuxia: rgb(186, 10, 192);
+        --green: rgb(49, 104, 3);
+    }
+    
+    /* ---------- CUSTOM DEFAULT PAGES ---------- */
+    
+    /* CUSTOM BACKGROUND AND TEXT */
+    
+    .bkgblk{
+        background-color: var(--black);
+    }
+    
+    .bkgblu{
+        background-color: var(--blue);
+        
+    }
+    
+    .bkgylw{
+        background-color: var(--yellow);
+        
+    }
+    
+    .bkgwht{
+        background-color: var(--white);
+    }
+    
+    .bkgred{
+        background-color: var(--red);
+    }
+    
+    .bkgfux{
+        background-color: var(--fuxia);
+    }
+    
+    .bkggrn{
+        background-color: var(--green);
+    }
+    
+    .txtblk{
+        color: var(--black);
+    }
+    
+    .txtblu{
+        color: var(--blue);
+    }
+    
+    .txtred{
+        color: var(--red);
+    }
+    
+    .txtylw{
+        color: var(--yellow);
+    }
+    
+    .txtwht{
+        color: var(--white);
+    }
+    
+    /* CUSTOM NAVBAR */
+    
+    .navbar .nav-link.txtwht {
+        color: var(--white);
+    }
+    
+    .navbar .nav-link.txtblk {
+        color: var(--black);
+    }
+    
+    .navbar .nav-link.txtblu {
+        color: var(--blue);
+    }
+    
+    .navbar .nav-link.txtylw {
+        color: var(--yellow);
+    }
+    
+    .navbar .nav-link.txtred {
+        color: var(--red);
+    }
+
+
+    /* MASTER HEAD */
+    .masterhead {
+        height: 25vh;
+        min-height: 250px;
+        
+    }
+
+    /* IMAGE-BACKGROUND HOMEPAGE */
+
+    .bg-multimedia{
+    background-color: var(--black);
+    background-image: url('./../../public/media/sfdbkgpiccola.png');
+    background-size: 40%;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+    
+    /* FLASH MESSAG END ERROR */
+    
+    .flash-message-container {
+        position: relative;
+        height: 0;
+        overflow: visible;
+    }
+    
+    .flash-message-success { 
+        position: absolute;
+        top: -75px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+        width: 75%;
+        white-space: nowrap; 
+    }
+    
+    .flash-message-error {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 75%;
+    white-space: nowrap;
+    
+    }
+    
+    /* CUSTOM FORM */
+    
+    .formcustom{
+        margin-top: 20px;
+        width: 100%;
+        max-width: 900px;
+        
+    }
+    
+    
+    .buttonform{
+        text-align: center;
+        
+    }
