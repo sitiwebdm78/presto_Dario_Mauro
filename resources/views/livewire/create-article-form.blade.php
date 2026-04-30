@@ -1,7 +1,7 @@
 <div class="container-fluid min-vh-100 bkgblu position-relative">
     <div class="row mb-5">
         <div class="col-12">
-            <h1 class="text-center mt-2 pt-3 txtwht">Pubblica il Tuo Articolo</h1>       
+            <h1 class="text-center mt-5 pt-5 txtwht">Pubblica il Tuo Articolo</h1>       
             <x-displaymessage />
             <div class="d-flex justify-content-center ">
                 <form class="p-4 rounded-5 shadow bg-warning formcustom" wire:submit.prevent="save">
