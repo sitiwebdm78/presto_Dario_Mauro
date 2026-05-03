@@ -1,9 +1,9 @@
 <div class="container-fluid min-vh-100 bkgblu position-relative">
     <div class="row mb-5">
         <div class="col-12">
-            <h1 class="text-center mt-5 pt-5 txtwht">Pubblica il Tuo Articolo</h1>       
+            <h1 class="text-center mt-5 pt-5 txtwht">Pubblica il Tuo Articolo</h1>
             <x-displaymessage />
-            <div class="d-flex justify-content-center ">
+            <div class="d-flex justify-content-center">
                 <form class="p-4 rounded-5 shadow bg-warning formcustom" wire:submit.prevent="save">
                     <h5 class="text-center txtblk">CREA IL TUO ARTICOLO</h5>
                     <div class="mb-3">
@@ -25,7 +25,7 @@
                         <select id="category" class="form-select" wire:model="category">
                             <option>Seleziona una Categoria</option>
                             @foreach($categories as $category)
-                            <option value="{{$category->id }}"> {{$category->name }} </option>  
+                            <option value="{{$category->id }}"> {{$category->name }} </option>
                             @endforeach
                         </select>
                     </div>
@@ -46,7 +46,7 @@
         </div>
     </div>
 </div>
-    
-    
-    
-    
+
+
+
+

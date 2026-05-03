@@ -1,11 +1,11 @@
  <x-layout>
     <x-navbar />
     <x-displaymessage />
-    <x-displayerror />  
+    <x-displayerror />
     <div class="container-fluid vh-100 bkgblu">
         <div class="row mb-5">
             <div class="col-12 vh-100">
-                <h1 class="text-center mt-2 pt-3 txtwht">Registrati</h1>
+                <h1 class="text-center mt-5 pt-5 txtwht">Registrati</h1>
                 <div class="d-flex justify-content-center">
                     <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data" class="formcustom centerform shadow-lg">
                         @csrf

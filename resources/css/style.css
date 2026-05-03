@@ -1,7 +1,7 @@
     /* CUSTOM STYLE PRESTO WEB SIZE */
-    
+
     /* ROOT AND VARIABLES */
-    
+
     :root{
         --black: rgb(0, 0, 0);
         --blue: rgb(5, 5, 146);
@@ -10,7 +10,7 @@
         --red: rgb(255, 35, 35);
         --fuxia: rgb(186, 10, 192);
         --green: rgb(49, 104, 3);
-        
+
         /* Variabili per hover dei dropdown */
         --hover-bg-ylw: #f0d458;
         --hover-bg-blu: #1a1a8f;
@@ -19,92 +19,90 @@
         --hover-bg-red: #cc0000;
         --hover-bg-fux: #9a0b9e;
         --hover-bg-grn: #3a7a02;
-        
+
         /* Testo hover */
         --txt-hover-dark: darkblue;
         --txt-hover-light: #f0f0f0;
-        
+
         --bs-dropdown-link-active-bg: transparent;
         --bs-dropdown-link-active-color: inherit;
         --bs-dropdown-link-hover-bg: rgba(244, 243, 243, 0.1);
         --bs-btn-active-bg: transparent;
         --bs-btn-active-border-color: transparent;
     }
-    
-    
-    
+
     /* ---------- CUSTOM DEFAULT PAGES ---------- */
-    
+
     /* CUSTOM BACKGROUND AND TEXT */
-    
+
     .bkgblk{
         background-color: var(--black);
     }
-    
+
     .bkgblu{
         background-color: var(--blue);
     }
-    
+
     .bkgylw{
         background-color: var(--yellow);
     }
-    
+
     .bkgwht{
         background-color: var(--white);
     }
-    
+
     .bkgred{
         background-color: var(--red);
     }
-    
+
     .bkgfux{
         background-color: var(--fuxia);
     }
-    
+
     .bkggrn{
         background-color: var(--green);
     }
-    
+
     /* Classi per il testo */
     .txtblk{
         color: var(--black);
     }
-    
+
     .txtblu{
         color: var(--blue);
     }
-    
+
     .txtred{
         color: var(--red);
     }
-    
+
     .txtylw{
         color: var(--yellow);
     }
-    
+
     .txtwht{
         color: var(--white);
     }
-    
+
     /* SEZIONE DROP DOWN THEME */
-    
+
     [class*="bkg"][class*="txt"] .dropdown-menu {
         background-color: var(--dropdown-bg);
     }
-    
+
     [class*="bkg"][class*="txt"] .dropdown-item {
         color: var(--dropdown-text);
     }
-    
+
     [class*="bkg"][class*="txt"] .dropdown-item:hover {
         background-color: var(--dropdown-hover-bg);
         color: var(--dropdown-hover-text);
     }
-    
+
     [class*="bkg"][class*="txt"] .dropdown-divider {
         border-top-color: var(--dropdown-divider-color, rgba(0,0,0,0.1));
     }
-    
+
     /* Combinazione YELLOW + BLU */
     .bkgylw.txtblu {
         --dropdown-bg: var(--yellow);
@@ -113,7 +111,7 @@
         --dropdown-hover-text: var(--txt-hover-dark);
         --dropdown-divider-color: rgba(5, 5, 146, 0.2);
     }
-    
+
     /* Combinazione BLUE + WHITE */
     .bkgblu.txtwht {
         --dropdown-bg: var(--blue);
@@ -122,7 +120,7 @@
         --dropdown-hover-text: var(--txt-hover-light);
         --dropdown-divider-color: rgba(255, 255, 255, 0.2);
     }
-    
+
     /* Combinazione BLACK + WHITE */
     .bkgblk.txtwht {
         --dropdown-bg: var(--black);
@@ -131,7 +129,7 @@
         --dropdown-hover-text: var(--txt-hover-light);
         --dropdown-divider-color: rgba(255, 255, 255, 0.2);
     }
-    
+
     /* Combinazione WHITE + BLACK */
     .bkgwht.txtblk {
         --dropdown-bg: var(--white);
@@ -140,7 +138,7 @@
         --dropdown-hover-text: var(--txt-hover-dark);
         --dropdown-divider-color: rgba(0, 0, 0, 0.1);
     }
-    
+
     /* Combinazione RED + WHITE */
     .bkgred.txtwht {
         --dropdown-bg: var(--red);
@@ -149,7 +147,7 @@
         --dropdown-hover-text: var(--txt-hover-light);
         --dropdown-divider-color: rgba(255, 255, 255, 0.2);
     }
-    
+
     /* Combinazione FUXIA + WHITE */
     .bkgfux.txtwht {
         --dropdown-bg: var(--fuxia);
@@ -158,7 +156,7 @@
         --dropdown-hover-text: var(--txt-hover-light);
         --dropdown-divider-color: rgba(255, 255, 255, 0.2);
     }
-    
+
     /* Combinazione GREEN + WHITE */
     .bkggrn.txtwht {
         --dropdown-bg: var(--green);
@@ -167,7 +165,7 @@
         --dropdown-hover-text: var(--txt-hover-light);
         --dropdown-divider-color: rgba(255, 255, 255, 0.2);
     }
-    
+
     /* Combinazione YELLOW + BLACK */
     .bkgylw.txtblk {
         --dropdown-bg: var(--yellow);
@@ -176,7 +174,7 @@
         --dropdown-hover-text: var(--txt-hover-dark);
         --dropdown-divider-color: rgba(0, 0, 0, 0.2);
     }
-    
+
     /* Combinazione BLUE + YELLOW */
     .bkgblu.txtylw {
         --dropdown-bg: var(--blue);
@@ -185,102 +183,102 @@
         --dropdown-hover-text: var(--txt-hover-light);
         --dropdown-divider-color: rgba(235, 191, 16, 0.2);
     }
-    
+
     /* Card styling e combinazioni bkg + text */
 
     .card.bkgblu.txtwht {
         background-color: var(--blue);
         color: var(--white);
     }
-    
+
     .card.bkgblu.txtwht .card-title,
     .card.bkgblu.txtwht .card-subtitle,
     .card.bkgblu.txtwht .card-text {
         color: var(--white);
     }
-    
+
     .card.bkgylw.txtblu {
         background-color: var(--yellow);
         color: var(--blue);
     }
-    
+
     .card.bkgylw.txtblu .card-title,
     .card.bkgylw.txtblu .card-subtitle,
     .card.bkgylw.txtblu .card-text {
         color: var(--blue);
     }
-    
+
     .card.bkgwht.txtblk {
         background-color: var(--white);
         color: var(--black);
     }
-    
+
     .card.bkgwht.txtblk .card-title,
     .card.bkgwht.txtblk .card-subtitle,
     .card.bkgwht.txtblk .card-text {
         color: var(--black);
     }
-    
+
     .card.bkgylw.txtblk {
         background-color: var(--yellow);
         color: var(--black);
     }
-    
+
     .card.bkgylw.txtblk .card-title,
     .card.bkgylw.txtblk .card-subtitle,
     .card.bkgylw.txtblk .card-text {
         color: var(--black);
     }
-    
-    
+
+
     .card.bkgblk.txtylw {
         background-color: var(--black);
         color: var(--yellow);
     }
-    
+
     .card.bkgblk.txtylw .card-title,
     .card.bkgblk.txtylw .card-subtitle,
     .card.bkgblk.txtylw .card-text {
         color: var(--yellow);
     }
     /* CUSTOM NAVBAR */
-    
+
     .navbar{
         height: 70px;
         align-items: center;
     }
-    
+
     .navbar .nav-link.txtwht {
         color: var(--white);
         font-size: large;
     }
-    
+
     .navbar .nav-link.txtblk {
         color: var(--black);
         font-size: large;
     }
-    
+
     .navbar .nav-link.txtblu {
         color: var(--blue);
         font-size: large;
     }
-    
+
     .navbar .nav-link.txtylw {
         color: var(--yellow);
         font-size: large;
     }
-    
+
     .navbar .nav-link.txtred {
         color: var(--red);
         font-size: large;
     }
-    
+
     /* MASTER HEAD */
     .masterhead {
         height: 25vh;
         min-height: 250px;
     }
-    
+
     /* IMAGE-BACKGROUND HOMEPAGE */
     .bg-multimedia{
         background-color: var(--black);
@@ -289,24 +287,24 @@
         background-position: center;
         background-repeat: no-repeat;
     }
-    
+
     /* FLASH MESSAG END ERROR */
     .flash-message-container {
         position: relative;
         height: 0;
         overflow: visible;
     }
-    
-    .flash-message-success { 
+
+    .flash-message-success {
         position: absolute;
         top: -75px;
         left: 50%;
         transform: translateX(-50%);
         z-index: 1000;
-        width: 75%;
-        white-space: nowrap; 
+        width: 100%;
+        white-space: nowrap;
     }
-    
+
     .flash-message-error {
         position: absolute;
         left: 50%;
@@ -315,14 +313,14 @@
         width: 75%;
         white-space: nowrap;
     }
-    
+
     /* CUSTOM FORM */
     .formcustom{
         margin-top: 20px;
         width: 100%;
         max-width: 900px;
     }
-    
+
     .buttonform{
         text-align: center;
     }

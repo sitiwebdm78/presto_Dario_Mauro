@@ -1,11 +1,11 @@
 <x-layout>
     <x-navbar />
     <x-displaymessage />
-    <x-displayerror />  
+    <x-displayerror />
     <div class="container-fluid vh-100 bkgblu">
         <div class="row mb-5">
             <div class="col-12 vh-100">
-                <h1 class="text-center mt-2 pt-3 txtwht">Accedi alla Tua Area Riservata</h1>
+                <h1 class="text-center mt-5 pt-5 txtwht">Accedi alla Tua Area Riservata</h1>
                 <div class="d-flex justify-content-center">
                     <form method="POST" action="{{ route('login') }}" enctype="multipart/form-data" class="formcustom shadow-lg">
                         @csrf
@@ -26,7 +26,7 @@
                                 <button type="submit" class="btn btn-primary mb-3">Accedi</button>
                             </div>
                         </div>
-                    </form>       
+                    </form>
                 </div>
             </div>
         </div>
