@@ -7,15 +7,19 @@
                     <a class="nav-link {{$text}} @if(Route::currentRouteName() === 'homepage') active_custom @endif" href="{{ route('homepage') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{$text}} @if(Route::currentRouteName() === 'index.article') active_custom @endif" href="{{ route('index.article') }}">Tutti gli articoli</a>
+                    <a class="nav-link {{$text}} @if(Route::currentRouteName() === 'index.article') active_custom @endif" href="{{ route('index.article') }}">{{ __('ui.Tutti gli articoli') }}</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link {{$text}} dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Categorie
+                        {{ __('ui.Categorie') }}
                     </a>
                     <ul class="dropdown-menu {{$bkg}}">
                         @foreach ($categories as $category)
-                        <li><a href="{{route('bycategory', ['category' => $category])}}" class="dropdown-item text-capitalize">{{ $category->name }}</a></li>
+                        <li>
+                            <a href="{{route('bycategory', ['category' => $category])}}" class="dropdown-item text-capitalize">
+                                {{ __('ui.' . $category->name) }}
+                            </a>
+                        </li>
                         @if (!$loop->last)
                         <li><hr class="dropdown-divider"></li>
                         @endif
@@ -24,13 +28,14 @@
                 </li>
             @auth
                 <li class="nav-item">
-                    <a class="nav-link {{$text}} @if(Route::currentRouteName() === 'create.article') active_custom @endif" href="{{ route('create.article') }}">Inserisci Articolo</a>
+                    <a class="nav-link {{$text}} @if(Route::currentRouteName() === 'create.article') active_custom @endif" href="{{ route('create.article') }}">{{ __('ui.Inserisci Articolo') }}</a>
                 </li>
                 @if (Auth::user()->is_revisor)
                     <li class="nav-item">
                         <a class="nav-link {{$text}} @if(Route::currentRouteName() === 'revisor.index') active_custom @endif btn btn-outline-success btn-sm position-relative w-sm-25"
-                        href="{{ route('revisor.index') }}">Zona Revisore
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"> {{\App\Models\Article::toBeRevisedCount()}}
+                        href="{{ route('revisor.index') }}">{{ __('ui.Zona Revisore') }}
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            {{\App\Models\Article::toBeRevisedCount()}}
                         </span>
                         </a>
                     </li>
@@ -38,12 +43,12 @@
             @endauth
             </ul>
 
-        <!-- Menu a desta -->
+        <!-- Menu a destra -->
         @auth
         <ul class="navbar-nav">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle {{$text}}" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Benvenuto {{Auth::user()->name}}
+                    {{ __('ui.Benvenuto') }} {{Auth::user()->name}}
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
                     <li>
@@ -59,11 +64,21 @@
 
         @guest
         <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link {{$text}}" href="{{route('register')}}">Registrati</a>
+            <li class="nav-item dropdown me-2">
+                <a class="nav-link dropdown-toggle {{$text}}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    🌐 {{ __('ui.Lingua') }}
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end {{$bkg}}">
+                    <li class="{{$text}}"><x-flags lang="it" /> Italiano</li>
+                    <li class="{{$text}}"><x-flags lang="uk" /> Inglese</li>
+                    <li class="{{$text}}"><x-flags lang="es" /> Spagnolo</li>
+                </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{$text}}" href="{{route('login')}}">Accedi</a>
+                <a class="nav-link {{$text}}" href="{{route('register')}}">{{ __('ui.Registrati') }}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{$text}}" href="{{route('login')}}">{{ __('ui.Accedi') }}</a>
             </li>
         </ul>
         @endguest

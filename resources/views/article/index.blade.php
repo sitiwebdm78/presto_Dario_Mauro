@@ -3,7 +3,7 @@
     <div class="container-fluid ">
         <div class="row height-custom justify-content-center align-items-center text-center">
             <div class="col-12 mt-5 pt-3">
-                <h1 class="display-1 txtblu ">Tutti gli articoli</h1>
+                <h1 class="display-1 txtblu ">{{ __('ui.allArticles') }}</h1>
             </div>
         </div>
         <div class="row height-custom justify-content-center align-items-center py-5">
