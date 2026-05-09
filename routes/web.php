@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 //ROTTE GESTITE DAL PUBLIC CONTROLLER
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 Route::post('/lingua/{lang}' , [PublicController::class, 'setLanguage' ])->name('setLocale');
+Route::get('/search/article', [PublicController::class, 'searchArticles'])->name('article.search');
 
 // ROTTE GESTITE DALL'ARTICLE CONTROLLER
 Route::get('/create/article', [ArticleController::class, 'create'])->name('create.article')->middleware('auth');

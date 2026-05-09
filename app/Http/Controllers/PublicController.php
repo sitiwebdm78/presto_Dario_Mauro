@@ -18,4 +18,12 @@ class PublicController extends Controller
         session()->put('locale', $lang);
         return redirect()->back();
     }
+
+    public function searchArticles(Request $request)
+    {
+        $query = $request->input('query');
+        $articles = Article:: search($query) ->where('is_accepted', true) ->paginate(10);
+        return view('article.searched', ['articles' => $articles, 'query' => $query]);
+    }
+
 }
