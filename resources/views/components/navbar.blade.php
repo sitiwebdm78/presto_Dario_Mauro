@@ -41,6 +41,12 @@
                 </li>
                 @endif
                 @endauth
+                <form class="d-flex ms-3" role="search" action="{{ route('article.search') }}" method="GET">
+                    <div class="input-group">
+                        <input type="search" name="query" class="form-control" placeholder="Search" aria-label="search">
+                        <button type="submit" class="input-group-text btn btn-outline-success" id="basic-addon2">Search</button>
+                    </div>
+                </form>
             </ul>
 
             <!-- Menu a destra -->
@@ -61,25 +67,9 @@
                 </li>
             </ul>
             @endauth
-
+            
             @guest
-            <form class="d-flex ms-auto" role="search" action="{{ route('article.search') }}" method="GET">
-                <div class="input-group">
-                    <input type="search" name="query" class="form-control" placeholder="Search" aria-label="search">
-                    <button type="submit" class="input-group-text btn btn-outline-success" id="basic-addon2">Search</button>
-                </div>
-            </form>
             <ul class="navbar-nav">
-                <li class="nav-item dropdown me-2">
-                    <a class="nav-link dropdown-toggle {{$text}}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        🌐 {{ __('ui.Lingua') }}
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end {{$bkg}}">
-                        <li class="{{$text}}"><x-flags lang="it" /> Italiano</li>
-                        <li class="{{$text}}"><x-flags lang="uk" /> Inglese</li>
-                        <li class="{{$text}}"><x-flags lang="es" /> Spagnolo</li>
-                    </ul>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link {{$text}}" href="{{route('register')}}">{{ __('ui.Registrati') }}</a>
                 </li>
@@ -88,6 +78,16 @@
                 </li>
             </ul>
             @endguest
+            <li class="nav-item dropdown me-2 ms-3" style="list-style-type: none;">
+                <a class="nav-link dropdown-toggle {{$text}}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    🌐 {{ __('ui.Lingua') }}
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end {{$bkg}}">
+                    <li class="{{$text}}"><x-flags lang="it" /> Italiano</li>
+                    <li class="{{$text}}"><x-flags lang="uk" /> Inglese</li>
+                    <li class="{{$text}}"><x-flags lang="es" /> Spagnolo</li>
+                </ul>
+            </li>
         </div>
     </div>
 </nav>
