@@ -291,21 +291,6 @@
     }
 
     /* FLASH MESSAG END ERROR */
-    /* .flash-message-container {
-        position: relative;
-        height: 0;
-        overflow: visible;
-    }
-
-    .flash-message-success {
-        position: absolute;
-        top: -75px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1000;
-        width: 100%;
-        white-space: nowrap;
-    } */
 
     .flash-message-error {
         position: absolute;
@@ -325,4 +310,13 @@
 
     .buttonform{
         text-align: center;
+    }
+
+    /* CREATE ARTICLE FORM */
+    .img-preview{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 120px;
+        width: 120px;
     }
