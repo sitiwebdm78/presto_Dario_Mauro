@@ -32,13 +32,16 @@
     </section>
 
     <!-- Section: Links  -->
+   
     <section>
         <div class="container text-center mt-2">
+             @auth
              <div class="row justify-content-center {{$text}}">
                 <h5>Vuoi diventare revisore?</h5>
                 <p>Cliccando il bottone sottostante farai richiesta al nostro admin</p>
                 <a href="{{ route('become.revisor') }}" class="btn btn-success">diventa revisore</a>
             </div>
+            @endauth
             <div class="row mt-5">
 
                 <!-- Colonna 1 -->

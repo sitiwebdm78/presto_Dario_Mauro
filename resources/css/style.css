@@ -291,7 +291,7 @@
     }
 
     /* FLASH MESSAG END ERROR */
-    .flash-message-container {
+    /* .flash-message-container {
         position: relative;
         height: 0;
         overflow: visible;
@@ -305,7 +305,7 @@
         z-index: 1000;
         width: 100%;
         white-space: nowrap;
-    }
+    } */
 
     .flash-message-error {
         position: absolute;
