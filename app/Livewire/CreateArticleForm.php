@@ -1,11 +1,12 @@
 <?php
 
 namespace App\Livewire;
-
+use App\Jobs\ResizeImage;
 use App\Models\Article;
 use App\Models\Category;
 use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
@@ -33,41 +34,39 @@ class CreateArticleForm extends Component
         $this->validate();
         
         $this->article = Article::create([
-            'title' => $this->title,
-            'description' => $this->description,
-            'price' => $this->price,
-            'category_id' => $this->category,
-            'user_id' => Auth::id()
+        'title' => $this->title,
+        'description' => $this->description,
+        'price' => $this->price,
+        'category_id' => $this->category,
+        'user_id' => Auth::id()
         ]);
-
+        
         if (count($this->images) > 0) {
             foreach ($this->images as $image) {
-                $this->article->images()->create(['path' => $image->store('images', 'public')]);
+                $newFileName = "articles/{$this->article->id}";
+                $newImage = $this->article->images()->create(['path' => $image->store($newFileName, 'public')]);
+                dispatch(new ResizeImage($newImage->path, 300, 300));
             }
         }
-        
-        // Pulisci il form
+
+        File::deleteDirectory(storage_path('/app/livewire-tmp'));
+        session()->flash('success', "Articolo creato correttamente");
         $this->cleanForm();
-        
-        // Messaggio di successo
-        session()->flash('message', 'Articolo creato con successo!');
-        
-        // ✅ REDIRECT ALLA HOME (o alla pagina che preferisci)
-        return redirect()->to('/');  // oppure redirect()->route('home')
+
     }
     
     public function render()
     {
         return view('livewire.create-article-form', [
-            'categories' => Category::all()
+        'categories' => Category::all()
         ]);
     }
     
     public function updatedTemporaryImages()
     {
         if ($this->validate([
-            'temporary_images.*' => 'image|max:1024',
-            'temporary_images' => 'max:6',
+        'temporary_images.*' => 'image|max:1024',
+        'temporary_images' => 'max:6',
         ])) {
             foreach ($this->temporary_images as $image) {
                 $this->images[] = $image;
@@ -81,7 +80,7 @@ class CreateArticleForm extends Component
             unset($this->images[$key]);
         }
     }
-
+    
     protected function cleanForm()
     {
         $this->title = '';
