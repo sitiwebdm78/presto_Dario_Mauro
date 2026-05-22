@@ -18,7 +18,7 @@
                                 <div class="card mb-3">
                                     <div class="row g-0">
                                         <div class="col-md-4">
-                                            <img src="{{ $image->getUrl(308, 300) }}" class="img-fluid rounded-start"
+                                            <img src="{{ Storage::url($image->path) }}" class="img-fluid rounded-start"
                                                 alt="Immagine {{ $key + 1 }} dell'articolo {{ $article_to_check->title }}">
                                         </div>
                                         <div class="col-md-5 ps-3">

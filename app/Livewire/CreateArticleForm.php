@@ -35,7 +35,9 @@ class CreateArticleForm extends Component
     public function save()
     {
         $this->validate();
-        
+
+        \Log::info('Numero immagini da salvare: ' . count($this->images));
+
         $this->article = Article::create([
         'title' => $this->title,
         'description' => $this->description,
@@ -51,7 +53,7 @@ class CreateArticleForm extends Component
                 /* dispatch(new ResizeImage($newImage->path, 308, 300));
                 dispatch(new GoogleVisionSafeSearch($newImage->id));
                 dispatch(new GoogleVisionLabelImage($newImage->id)); */
-                
+                 \Log::info('Immagine salvata: ' . $newImage->path);
                 RemoveFaces::withChain([
                 new ResizeImage($newImage->path, 300, 300),
                 new GoogleVisionSafeSearch($newImage->id),

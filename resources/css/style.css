@@ -184,6 +184,15 @@
         --dropdown-divider-color: rgba(235, 191, 16, 0.2);
     }
 
+    body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.container-fluid, .row {
+    overflow-x: hidden;
+}
+
     /* Card styling e combinazioni bkg + text */
 
     .card.bkgblu.txtwht {
